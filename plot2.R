@@ -19,6 +19,7 @@ dat2$Global_active_power <- as.numeric(dat2$Global_active_power)
 dat3 <- subset(dat2, Date >= "2007-02-01" & Date <= "2007-02-02")
 
 ## Create plot
+par(mfrow = c(1,1))
 png(file = "plot2.png", width = 480, height = 480, units = "px")
 dat3$date.and.time <- as.POSIXct(paste(dat3$Date, dat3$Time), 
                                  format = "%Y-%m-%d %H:%M:%S")

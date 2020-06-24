@@ -19,6 +19,7 @@ dat3 <- subset(dat2, Date >= "2007-02-01" & Date <= "2007-02-02")
 
 ## Create plot
 png(file = "plot3.png", width = 480, height = 480, units = "px")
+par(mfrow = c(1,1))
 dat3$date.and.time <- as.POSIXct(paste(dat3$Date, dat3$Time), 
                                  format = "%Y-%m-%d %H:%M:%S")
 plot(dat3$date.and.time, dat3$Sub_metering_1, type = "l",

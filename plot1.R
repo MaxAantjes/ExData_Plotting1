@@ -19,6 +19,7 @@ dat2$Global_active_power <- as.numeric(dat2$Global_active_power)
 dat3 <- subset(dat2, Date >= "2007-02-01" & Date <= "2007-02-02")
 
 ## Create plot
+par(mfrow = c(1,1))
 png(file = "plot1.png", width = 480, height = 480, units = "px")
 hist(dat3$Global_active_power, ylab = "Frequency", xlab = 
              "Global Active Power (kilowatts)", main = "Global Active Power",
