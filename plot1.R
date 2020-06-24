@@ -15,7 +15,7 @@ dat1 <- transform(dat0, Date = as.Date(Date, format = "%d/%m/%Y"))
 dat2 <- transform(dat1, Time = times(Time))
 dat2$Global_active_power <- as.numeric(dat2$Global_active_power)
 
-## Select the columns of interest
+## Select the rows of interest
 dat3 <- subset(dat2, Date >= "2007-02-01" & Date <= "2007-02-02")
 
 ## Create plot
